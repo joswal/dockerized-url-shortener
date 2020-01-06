@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Add new URL</title>
+  </head>
+  <body>
+    <div style="text-align: center; padding: 10px;">
+      <div
+        style="padding: 10px; max-width: 500px; margin-top: 50px; margin-left: auto;margin-right: auto; border:2px grey solid; border-radius: 5px;"
+      >
+        <h4 style="margin-bottom: 20px;">add a new url to be shortened</h4>
+        <form action="/new" method="post">
+          <label for="name">original link</label>
+          <input type="text" name="name" id="" placeholder="enter url here" />
+          <button
+            type="submit"
+            style="background-color: green;color: white; border-radius: 2px;"
+          >
+            shorten link
+          </button>
+        </form>
+      </div>
+
+      <div
+        style="max-width: 500px; margin-top: 50px; margin-left: auto;margin-right: auto; border:2px grey solid; border-radius: 5px;"
+      >
+        <h4 style="margin-bottom: 20px;">shortened links</h4>
+        <ul>
+          <% links.forEach(function(link){ %>
+          <li>
+            <span style="margin-right: 50px;"><%= link.name %></span>
+            <span>id: <%= link.id %></span>
+          </li>
+          <% }); %>
+        </ul>
+      </div>
+
+      <div
+        style="max-width: 500px; margin-top: 50px; margin-left: auto;margin-right: auto; border:2px grey solid; border-radius: 5px;"
+      >
+        <h5 style="margin-bottom: 20px;">you can test a shortened url by typing host:port/id e.g ( localhost:80/1 ) </h4>
+        
+      </div>
+    </div>
+  </body>
+</html>

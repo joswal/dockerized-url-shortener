@@ -1,0 +1,17 @@
+{
+  "name": "url_shortner",
+  "version": "1.0.0",
+  "description": "a simple url shortner node app",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node index.js"
+  },
+  "author": "joswal",
+  "license": "ISC",
+  "dependencies": {
+    "ejs": "^3.0.1",
+    "express": "^4.17.1",
+    "mongoose": "^5.8.4"
+  }
+}
